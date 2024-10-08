@@ -1,0 +1,27 @@
+
+.form-navbar{
+    background-color: #CE2829;
+    padding-top: 0;
+    height: 207px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+  .logo {
+    height: 4.5rem;
+    will-change: filter;
+    transition: filter 600ms;
+    margin-top: 6.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #ffffff);
+  }
+  
+  .logo.vanilla:hover {
+    filter: drop-shadow(0 0 2em #f7df1eaa);
+  }
+

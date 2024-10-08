@@ -1,0 +1,20 @@
+.custom-button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 1.6rem 7rem;
+    border-radius: 3rem;
+    font-size: 1.7rem;
+    background-color: #FDC913;
+    cursor: pointer;
+    transition: background-color 600ms;
+    max-width: fit-content;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    color: black;
+    border: none; 
+  }
+  
+  .custom-button:hover {
+    background-color: white;
+  }
+  
