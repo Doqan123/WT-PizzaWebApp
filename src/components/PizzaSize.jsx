@@ -1,5 +1,4 @@
-
-function PizzaType({ changeFn, checked, fieldName, value, label }) {
+function PizzaSize({ changeFn, checked, fieldName, value, label }) {
     return (
         <div>
             <label className="pizzaSize">
@@ -13,9 +12,7 @@ function PizzaType({ changeFn, checked, fieldName, value, label }) {
                 {label}
             </label>
         </div>
-
-
-    )
+    );
 }
 
-export default PizzaType;
+export default PizzaSize;

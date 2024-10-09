@@ -1,62 +1,107 @@
 import FormNavbar from "./FormNavbar";
-import "../styles/OrderForm.css"
-import PizzaType from "./PizzaType";
+import "../styles/OrderForm.css";
+import PizzaSize from './PizzaSize';
+import DoughSelection from './DoughSelection';
+import PizzaInfo from './PizzaInfo';
+import toppingsData from '../data/toppings.json'; // JSON'dan malzemeleri al
+import Topping from "./Topping";
+import NameSurname from "./NameSurname";
+import TextArea from "./TextArea"; // TextArea bileşenini içe aktar
 
-// bu forma seçilen bir piza gelmeli normalde ama projede bu istenmemiş. yinede gelen bu pizzanın ismini ve fiyatını değiştirecek bir component olabilir pizzaInfo gibi.
-//bu componentten price, title, pizzaLike gibi propslar gelebilir. bunları ilk başta statik olarak oluşturacağım daha sonra dinamik olarak tasarlayabilirim.
+import { useState } from 'react';
 
-function OrderForm({ formData, handleChange }) {
-    
-    // daha sonra bu pizzayı bir array içinde objeye alaayım useState kullanarak map ile buraya öyle yazdırayım. 
-    
+function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
+
+    const sizeData = ["Küçük", "Orta", "Büyük"];
+    const pizzaData = {
+        title: "Position Absolute Acı Pizza",
+        price: 85.50, // Pizza fiyatı
+        rating: 4.5,
+        reviews: 200,
+        description: `Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
+         Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, 
+         daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, 
+         düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . 
+         Küçük bir pizzaya bazen pizzetta denir.`
+    };
+  
+
+   
+ 
+
     return (
         <section className="order-form">
             <FormNavbar />
             <div className="formContainer">
-                <h3>Position Absolute Acı Pizza</h3>
-                <div className="priceAndPoint">
-                    <h2>85.50</h2>
-                    <p>4.5</p>
-                    <p>(200)</p>
-                </div>
-                <div className="description">
-                    Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.
-                </div>
+                <PizzaInfo
+                    title={pizzaData.title}
+                    price={ pizzaData.price}
+                    rating={pizzaData.rating}
+                    reviews={pizzaData.reviews}
+                    description={pizzaData.description}
+                />
+                <form onSubmit={handleSubmit}> {/* onSubmit prop'u ile handleSubmit fonksiyonunu bağla */}
+                    <h3>Boyut Seç</h3>
+                    {sizeData.map((size, index) => (
+                        <PizzaSize
+                            key={index}
+                            changeFn={handleChange}
+                            checked={formData.size === size}
+                            fieldName={"size"}
+                            value={size}
+                            label={size}
+                        />
+                    ))}
 
+                    <h3>Hamur Seç</h3>
+                    <DoughSelection
+                        changeFn={handleChange}
+                        selectedDough={formData.dough}
+                    />
+
+                    <h3>Ekstra Malzemeler</h3>
+                    <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+                    {toppingsData.map((topping) => (
+                        <Topping
+                            key={topping.id}
+                            changeFn={handleChange}
+                            checked={formData.topping.includes(topping.name)}
+                            fieldName="topping"
+                            value={topping.name}
+                            label={topping.name}
+                        />
+                    ))}
+
+                    <h3>Ad ve Soyad</h3>
+                    <NameSurname
+                        changeFn={handleChange}
+                        values={formData.userName} // firstName ve lastName değerlerini geçir
+                    />
+
+                    <h3>Sipariş Notu</h3>
+                    <TextArea
+                        value={formData.orderNote} // formData'dan sipariş notunu al
+                        changeFn={handleChange} // handleChange fonksiyonunu geçir
+                        fieldName="orderNote" // alan adını belirt
+                    />
+
+                    <input
+                        type="number"
+                        name="quantity"
+                        value={formData.quantity}
+                        onChange={handleChange}
+                        min="1"
+                    />
+                    <h1>{formData.totalPrice}</h1>
+
+                    <button type="submit">Siparişi Gönder</button> {/* Submit butonu */}
+                </form>
                 
-                    <form>
-                    <PizzaType
-                        changeFn={handleChange}
-                        checked={formData.size === "küçük"}
-                        fieldName={"size"}
-                        value={"küçük"}
-                        label={"Küçük"}
-                    />
-                    <PizzaType
-                        changeFn={handleChange}
-                        checked={formData.size === "orta"}
-                        fieldName={"size"}
-                        value={"orta"}
-                        label={"Orta"}
-                    />
-                     <PizzaType
-                        changeFn={handleChange}
-                        checked={formData.size === "büyük"}
-                        fieldName={"size"}
-                        value={"büyük"}
-                        label={"Büyük"}
-                    />
-                
-                    </form>
-                   
+                {error && <p style={{ color: "red" }}>{error}</p>}
+
             </div>
-
-
-
         </section>
-
-
-    )
+    );
 }
 
 export default OrderForm;
