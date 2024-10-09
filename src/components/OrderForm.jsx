@@ -3,15 +3,15 @@ import "../styles/OrderForm.css";
 import PizzaSize from './PizzaSize';
 import DoughSelection from './DoughSelection';
 import PizzaInfo from './PizzaInfo';
-import toppingsData from '../data/toppings.json'; // JSON'dan malzemeleri al
+import toppingsData from '../data/toppings.json'; 
 import Topping from "./Topping";
 import NameSurname from "./NameSurname";
-import TextArea from "./TextArea"; // TextArea bileşenini içe aktar
+import TextArea from "./TextArea";
+import QuantitySelector from "./QuantitySelector"; // Yeni bileşeni içe aktar
 
 import { useState } from 'react';
 
-function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
-
+function OrderForm({ formData, handleChange, handleSubmit, error }) {
     const sizeData = ["Küçük", "Orta", "Büyük"];
     const pizzaData = {
         title: "Position Absolute Acı Pizza",
@@ -24,10 +24,10 @@ function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
          düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . 
          Küçük bir pizzaya bazen pizzetta denir.`
     };
-  
 
-   
- 
+    const handleQuantityChange = (newQuantity) => {
+        handleChange({ target: { name: 'quantity', value: newQuantity } });
+    };
 
     return (
         <section className="order-form">
@@ -35,7 +35,7 @@ function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
             <div className="formContainer">
                 <PizzaInfo
                     title={pizzaData.title}
-                    price={ pizzaData.price}
+                    price={pizzaData.price}
                     rating={pizzaData.rating}
                     reviews={pizzaData.reviews}
                     description={pizzaData.description}
@@ -75,7 +75,9 @@ function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
                     <h3>Ad ve Soyad</h3>
                     <NameSurname
                         changeFn={handleChange}
-                        values={formData.userName} // firstName ve lastName değerlerini geçir
+                        value={formData.userName} // firstName ve lastName değerlerini geçir
+                        fieldName="userName"
+                        label="Ad ve Soyad"
                     />
 
                     <h3>Sipariş Notu</h3>
@@ -85,20 +87,16 @@ function OrderForm({ formData, handleChange, handleSubmit, error,  }) {
                         fieldName="orderNote" // alan adını belirt
                     />
 
-                    <input
-                        type="number"
-                        name="quantity"
-                        value={formData.quantity}
-                        onChange={handleChange}
-                        min="1"
+                    <h3>Adet</h3>
+                    <QuantitySelector 
+                        quantity={formData.quantity} 
+                        onQuantityChange={handleQuantityChange} 
                     />
-                    <h1>{formData.totalPrice}</h1>
 
                     <button type="submit">Siparişi Gönder</button> {/* Submit butonu */}
                 </form>
-                
-                {error && <p style={{ color: "red" }}>{error}</p>}
 
+                {error && <p style={{ color: "red" }}>{error}</p>}
             </div>
         </section>
     );

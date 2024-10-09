@@ -1,6 +1,8 @@
+import '../styles/PizzaInfo.css'; // CSS dosyasını içe aktarın
+
 function PizzaInfo({ title, price, rating, reviews, description }) {
     return (
-        <div>
+        <div className="pizza-info"> 
             <h3>{title}</h3>
             <div className="priceAndPoint">
                 <h2>{price} TL</h2>
