@@ -1,9 +1,77 @@
 
 .formContainer{
     width: 100%;
-    max-width: 532px;
+    max-width: 550px;
     margin: 0 auto;
     padding: 0 15px;
     font-size: 16px;
     font-family: "Barlow", sans-serif;
+    
+}
+.size-dough-form-order {
+    display: flex;
+    gap: 200px;
+
+}
+
+.size-dough-form-order h3{
+    font-weight: 600;
+}
+
+.topping-order-form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top:20px 
+}
+
+.topping-items{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    column-gap: 120px;
+    padding: 35px 0 50px 0 ;
+}
+
+.nameSurname-form-order {
+    display: flex;
+    gap: 80px;
+    padding-bottom: 35px;
+}
+
+
+.order-note-form-order {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #5F5F5F80;
+}
+
+.quantity-and-order-form-order {
+    display: flex;
+    align-items: flex-start; /* Dikey olarak ortalamak için */
+    gap: 20px; /* Elemanlar arasında boşluk oluşturmak için */
+    padding: 35px 0 200px 0;
+}
+.order-sum-form-order {
+    width: 100%; /* Kapsayıcı genişliği doldur */
+    height: 255px; /* Belirtilen yükseklik */
+    
+}
+
+/* bu buton cssini düzenle sonra  */
+button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #FDC913; 
+    color: #000; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #e0a800; 
 }

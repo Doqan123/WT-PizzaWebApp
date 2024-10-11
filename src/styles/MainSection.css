@@ -1,0 +1,476 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Satisfy&display=swap');
+
+/* base html codes */
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: #FAF7F2;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* BANNER-SECTION start */
+.banner-section {
+  min-height: 100vh;
+  background-image: url("/public/assets/iteration-1/home-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* banner-content */
+.banner-section .banner-content {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-section .banner-content h1 {
+  font-size: 8.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 260;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+}
+.banner-section .banner-content p {
+  font-size: 3rem;
+  font-family: "Satisfy", sans-serif;
+  color: #FDC913;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* banner button  */
+
+.banner-section button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1.6rem 7rem;
+  border-radius: 3rem;
+  font-size: 1.7rem;
+  background-color: #FDC913;
+  cursor: pointer;
+  transition: background-color 600ms;
+  max-width: fit-content;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: black;
+  border: none;
+}
+
+.banner-section button:hover {
+  background-color: #ffffff;
+}
+
+/* logo css   */
+
+.logo {
+  height: 4.5rem;
+  will-change: filter;
+  transition: filter 600ms;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffff);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+/* BANNER-SECTION end */
+
+/* FOOD-BAR-SECTION start */
+.food-bar{
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.food-bar .container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  
+}
+
+.food-bar .container a {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  margin:0;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: black;
+  transition: color 300ms;
+  
+}
+
+.food-bar .container img {
+  width: 3.9rem; 
+  height: auto; 
+}
+
+.food-bar span {
+  margin: 1.5rem; 
+}
+.food-bar .container a:hover{
+  color: #FDC913;;
+  
+}
+/* FOOD-BAR-SECTION end */
+/* CARD SECTİON start */
+
+.card-items {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+  padding: 7rem 3rem 5rem 3rem;
+}
+
+.card-items .left-items {
+  width: 50%;
+}
+
+.card-items .right-items {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+}
+
+.card-items button {
+  margin: 2rem 3rem ;
+  display: inline-block;
+  padding: 1.4rem 3.5rem;
+  border-radius: 3rem;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 600ms;
+  max-width: fit-content;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 650;
+  color: #CE2829;
+  border: none;
+  
+}
+
+.card-items button:hover {
+  background-color: #FDC913;
+}
+
+
+/* card-1 stili */
+.card-1 {
+  width: 100%; 
+  height: 450px; 
+  box-sizing: border-box;
+  background-image: url(/Assets/Iteration-2-aseets/cta/kart-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: white;
+}
+/* card-1css */
+.card-1 h2 {
+  font-family: "Quattrocento", sans-serif;
+  font-weight: bold;
+  font-size: 6.8rem; 
+  margin: 3rem 0 0 3rem;
+  line-height: 1; 
+}
+
+.card-1 p{
+  font-family: "Barlow",sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem 3rem;
+}
+
+/* card-2 ve card-3 stili */
+.card-2,
+.card-3 {
+  width: 100%; 
+  height: 22rem; 
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: white;
+ 
+}
+
+/* card-2'nin arka plan resmi */
+.card-2 {
+  background-image: url(/Assets/Iteration-2-aseets/cta/kart-2.png);
+}
+
+/* card-3'ün arka plan resmi */
+.card-3 {
+  background-image: url(/Assets/Iteration-2-aseets/cta/kart-3.png);
+}
+
+/* card-2 card-3 css */
+
+.card-2 h3, .card-3 h3{
+  font-family: "Barlow",sans-serif;
+  font-size: 3.2rem;
+  margin: 2rem 0 0 2rem;
+  font-weight: 500;
+}
+
+.card-2 button, .card-3 button {
+  margin: 2rem 2rem;
+}
+
+/* SLOGAN CSS */
+
+.slogan-section .container{
+  text-align: center;
+}
+.slogan-section p{
+font-family: "Satisfy",sans-serif;
+font-size: 3.2rem;
+font-weight: 500;
+color: #CE2829;
+}
+.slogan-section h2{
+  font-family: "Barlow",sans-serif;
+  font-size: 4rem;
+  font-weight: 630;
+}
+
+/* FOOD-BAR-2 */
+
+.food-bar-2{
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  background-color: #FAF7F2;
+  align-items: center;
+}
+
+.food-bar-2 .container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  
+}
+
+.food-bar-2 .container a {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  margin:0;
+  padding:0.3rem 1rem ;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: black;
+  background-color: #FFFFFF;
+  border-radius: 3rem;
+  transition: color 300ms, background-color 300ms; 
+  
+}
+
+.food-bar-2 .container img {
+  width: 3.9rem; 
+  height: auto; 
+}
+
+.food-bar-2 span {
+  margin: 1.5rem; 
+}
+.food-bar-2 .container a:hover{
+  color: #FDC913;;
+  background-color: black;
+  
+}
+
+/* FOOD-BAR-2 end */
+
+/* MENU-BOX-SECTION start */
+.menu-card .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+.menu-card .menu-box{
+  background-color: #FFFFFF;
+  margin-top: 2rem;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+.menu-card h5{
+  font-family: "Barlow", sans-serif;
+  font-size: 2rem;
+  font-weight: 630;
+  margin: 1.5rem;
+}
+ .menu-card span{
+  font-family: "Barlow",sans-serif;
+  font-size: 2rem;
+  margin: 0 1.5rem;
+ }
+ .menu-card .right-span{
+  float: right;
+ }
+
+
+
+ /* Footer Section start */
+footer{
+  background-color: black;
+  color:white;
+
+}
+ footer .container{
+  display: flex;
+  justify-content: space-between;
+
+
+ }
+/* left footer */
+ footer .left-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem  0 0 0;
+ }
+
+
+footer .left-footer .address, .mail, .phone,.logo-footer{
+  display: flex;
+  padding: 2rem;
+  font-family: "Barlow",sans-serif;
+  font-size: 2rem;
+
+}
+
+.left-footer .address img,
+.left-footer .mail img,
+.left-footer .phone img {
+  margin-right: 1rem; /* İcon ve metin arasında boşluk */
+}
+/* middle footer */
+footer .middle-footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 11.5rem;
+  font-family: "Barlow",sans-serif;
+}
+
+
+footer  h3{
+font-size: 3rem;
+margin: 1rem 0 1rem 0 ;
+}
+
+footer .foods span{
+  display: flex;
+  padding-top: 2rem ;
+  font-size: 2rem;
+  
+}
+
+/* Right footer */
+footer .photo-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11.5rem;
+}
+footer .photo-section h2{
+  margin: 1rem 0 3rem 0;
+  font-family: "Barlow" sans-serif;
+  font-size: 3rem;
+
+}
+
+footer .food-photo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Üç sütun oluşturur */
+  gap: 1rem; 
+}
+
+
+footer .food-photo img {
+  width: 100%; /* Resim genişliğini kapsayıcıya göre ayarlayın */
+  height: auto; /* Yüksekliği otomatik ayarla */
+}
+
+
+/* Last div */
+.last {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  background-color: black;
+  align-items: center;
+
+}
+
+
+
+@media screen and (max-width: 700px){
+  body{
+    min-width: fit-content;
+  }
+
+  .banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+  }
+   .logo {
+    height: 4.5rem;
+    margin: 10rem 0 0 0;
+
+    
+  }
+  
+  .banner-content h1{
+    padding:0 5rem ;
+    margin: 2rem 0;
+  }
+  .banner-content p{
+    display: none;
+  }
+
+  .banner-content button{
+    margin: 0;
+  }
+
+  .food-bar{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+
+   
+
+}
+
+
+

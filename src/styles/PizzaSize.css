@@ -1,0 +1,13 @@
+.pizzaSize {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px ;
+    font-weight: 500;
+    color: #5F5F5F
+  
+}
+
+.pizzaSize input {
+    margin-right:16px; 
+    
+}

@@ -1,0 +1,43 @@
+/* FOOD-BAR-SECTION start */
+.food-bar{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    background-color: #ffffff;
+    align-items: center;
+  }
+  
+  .food-bar .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+  }
+  
+  .food-bar .container a {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin:0;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: black;
+    transition: color 300ms;
+    
+  }
+  
+  .food-bar .container img {
+    width: 3.9rem; 
+    height: auto; 
+  }
+  
+  .food-bar span {
+    margin: 1.5rem; 
+  }
+  .food-bar .container a:hover{
+    color: #FDC913;;
+    
+  }
+  /* FOOD-BAR-SECTION end */

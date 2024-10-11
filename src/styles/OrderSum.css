@@ -1,0 +1,64 @@
+.toppings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 230px; 
+    align-items: center; 
+    border: 1px solid #D9D9D9;
+}
+
+.toppings-data {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    column-gap: 60px; 
+    row-gap: 20px;
+    width: 80%; 
+    padding: 50px;
+    font-weight: 600;
+}
+
+.baslik {
+    grid-area: 1 / 1 / 2 / 3; 
+    font-weight: bold; 
+    text-align: left; 
+}
+
+.bos {
+    grid-area: 1 / 2; /* İlk satır, ikinci sütun boş */
+}
+
+.seçimler {
+    grid-area: 2 / 1; /* İkinci satır, ilk sütun */
+    
+}
+
+.topping-cost {
+    grid-area: 2 / 2; /* İkinci satır, ikinci sütun */
+
+}
+
+.toplam {
+    grid-area: 3 / 1; /* Üçüncü satır, ilk sütun */
+    color: #CE2829
+}
+
+.total-price {
+    grid-area: 3 / 2; /* Üçüncü satır, ikinci sütun */
+    color: #CE2829
+}
+
+.topping-button {
+    width: 100%; 
+    margin-top: auto; 
+}
+
+.topping-button button {
+    width: 100%; 
+    height: 55px;
+    background-color: #FDC913;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

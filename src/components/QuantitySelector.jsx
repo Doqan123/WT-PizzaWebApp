@@ -1,4 +1,4 @@
-
+import "../styles/QuantitySelector.css"
 import React from 'react';
 
 function QuantitySelector({ quantity, onQuantityChange }) {

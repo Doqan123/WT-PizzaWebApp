@@ -1,0 +1,18 @@
+.breadcrumbs {
+    margin: 10px 0; /* Üst ve alt boşluk */
+    font-family: "Barlow" ,sans-serif;
+    font-size: 15px; /* Yazı boyutu */
+    color: #FAF7F2; /* Yazı rengi */
+    padding-right: 350px;
+    padding-top: 20px;
+    
+}
+
+.breadcrumbs a {
+    color: #FAF7F2; /* Bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline; /* Üzerine gelince alt çizgi ekle */
+}

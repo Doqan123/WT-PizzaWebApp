@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 function TotalPriceCalculator({ formData, pizzaPrice, setFormData }) {
 
   const calculateTotalPrice = () => {
-    const toppingCost = formData.topping.length * formData.extraToppingPrice;  // extraToppingPrice formData'dan alınacak
+    const toppingCost = formData.topping.length * formData.extraToppingPrice;  
     const pizzaCost = pizzaPrice * (formData.quantity );
     return pizzaCost + toppingCost;
   };

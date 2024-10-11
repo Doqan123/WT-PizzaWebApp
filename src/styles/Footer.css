@@ -1,0 +1,87 @@
+/* Footer Section start */
+footer {
+    background-color: black;
+    color: white;
+  }
+  
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Left Footer */
+  footer .left-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0 0 0;
+  }
+  
+  footer .left-footer .address,
+  footer .left-footer .mail,
+  footer .left-footer .phone,
+  footer .left-footer .logo-footer {
+    display: flex;
+    padding: 2rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 2rem;
+  }
+  
+  .left-footer .address img,
+  .left-footer .mail img,
+  .left-footer .phone img {
+    margin-right: 1rem; /* İkon ve metin arasında boşluk */
+  }
+  
+  /* Middle Footer */
+  footer .middle-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11.5rem;
+    font-family: "Barlow", sans-serif;
+  }
+  
+  footer h3 {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  
+  footer .foods span {
+    display: flex;
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+  
+  /* Right Footer */
+  footer .photo-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11.5rem;
+  }
+  
+  footer .photo-section h2 {
+    margin: 1rem 0 3rem 0;
+    font-family: "Barlow", sans-serif;
+    font-size: 3rem;
+  }
+  
+  footer .food-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Üç sütun oluşturur */
+    gap: 1rem;
+  }
+  
+  footer .food-photo img {
+    width: 100%; /* Resim genişliğini kapsayıcıya göre ayarlayın */
+    height: auto; /* Yüksekliği otomatik ayarla */
+  }
+  
+  /* Last div */
+  .last {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    background-color: black;
+    justify-content: center; /* Merkeze yerleştirme */
+    color: white; /* Yazı rengini beyaz yap */
+  }
+  

@@ -6,18 +6,13 @@
     { "id": 5, "name": "Zeytin" },
     { "id": 6, "name": "Soğan" },
     { "id": 7, "name": "Domates" },
-    { "id": 8, "name": "Ananas" },
+    { "id": 8, "name": "Füme Et" },
     { "id": 9, "name": "Jalapeno" },
-    { "id": 10, "name": "Tuna" },
+    { "id": 10, "name": "Özel Sos" },
     { "id": 11, "name": "Kıyma" },
-    { "id": 12, "name": "Bacon" },
+    { "id": 12, "name": "Ceviz" },
     { "id": 13, "name": "Sarımsak" },
     { "id": 14, "name": "Kekik" },
-    { "id": 15, "name": "Fesleğen" },
-    { "id": 16, "name": "Roka" },
-    { "id": 17, "name": "Kapya Biber" },
-    { "id": 18, "name": "Kavrulmuş Mısır" },
-    { "id": 19, "name": "Avokado" },
-    { "id": 20, "name": "Baharat Karışımı" }
+    { "id": 15, "name": "Fesleğen" }
   ]
   

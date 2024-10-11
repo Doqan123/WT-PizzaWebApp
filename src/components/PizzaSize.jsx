@@ -1,7 +1,8 @@
+import '../styles/PizzaSize.css'; 
 function PizzaSize({ changeFn, checked, fieldName, value, label }) {
     return (
-        <div>
-            <label className="pizzaSize">
+        <div className='pizzaSize'>
+            <label htmlFor='pizzaSize'>
                 <input
                     type="radio"
                     onChange={changeFn}
